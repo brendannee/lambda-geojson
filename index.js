@@ -17,25 +17,9 @@ GLOBAL.L = require('leaflet');
 
 var leafletPip = require('leaflet-pip');
 var polyline = require('polyline');
-var util = require('util');
 
-var countiesData;
-var statesData;
-
-try {
-  countiesData = JSON.parse(fs.readFileSync('data/counties.geojson', 'utf8'));
-} catch(e) {
-  console.error('Invalid counties file');
-  process.exit(1);
-}
-
-try {
-  statesData = JSON.parse(fs.readFileSync('data/states.json', 'utf8'));
-} catch(e) {
-  console.error('Invalid states file');
-  process.exit(1);
-}
-
+var countiesData = require('./data/counties.json');
+var statesData = require('./data/states.json');
 var countiesLayer = L.geoJson(countiesData);
 
 

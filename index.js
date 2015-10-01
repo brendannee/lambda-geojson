@@ -48,7 +48,7 @@ exports.handler = function(event, context) {
       if (idx === 1 || idx % 20 === 0 || idx === (decodedPath.length - 1)) {
         var countyLayer = leafletPip.pointInLayer([point[1], point[0]], countiesLayer, true);
 
-        if(countyLayer) {
+        if(countyLayer && countyLayer.length && countyLayer[0].feature && countyLayer[0].feature.properties) {
           var county = countyLayer[0].feature.properties;
           counties[county.STATE + county.COUNTY] = {
             id: county.STATE + county.COUNTY,

@@ -44,8 +44,8 @@ exports.handler = function(event, context) {
     // Determine counties for points along path
     // Downsample points to speed up query
     decodedPath.forEach(function(point, idx) {
-      // use first, last and every 20th point
-      if (idx === 1 || idx % 20 === 0 || idx === (decodedPath.length - 1)) {
+      // use first, last and every 40th point
+      if (idx === 1 || idx % 40 === 0 || idx === (decodedPath.length - 1)) {
         var countyLayer = leafletPip.pointInLayer([point[1], point[0]], countiesLayer, true);
 
         if(countyLayer && countyLayer.length && countyLayer[0].feature && countyLayer[0].feature.properties) {

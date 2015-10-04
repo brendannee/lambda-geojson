@@ -28,7 +28,7 @@ exports.handler = function(event, context) {
   var encodedPaths = event;
 
   if (!encodedPaths || !encodedPaths.length) {
-    return context.done(new Error('Invalid Input'));
+    return context.done(new Error('Invalid Input', encodedPaths));
   }
 
 

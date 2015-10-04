@@ -26,7 +26,7 @@ This project uses [Amazon Lambda](http://aws.amazon.com/lambda/), [Amazon API Ga
 
 You can run the code locally With
 
-  node local
+    node local
 
 This will test against the data in `sample-data/data.json`.
 

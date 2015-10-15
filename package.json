@@ -13,12 +13,12 @@
   "dependencies": {
     "leaflet": "^0.7.5",
     "leaflet-pip": "^0.1.1",
-    "polyline": "0.1.0",
+    "polyline": "0.2.0",
     "topojson": "^1.6.19",
     "underscore": "1.8.3"
   },
   "engines": {
-    "node": "0.12.x"
+    "node": "4.2.x"
   },
   "scripts": {
     "start": "node ./index.js"
